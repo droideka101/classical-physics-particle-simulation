@@ -44,7 +44,8 @@ opposite side of the window
 ## Slightly technical explanation (because I’m too lazy to properly comment my code)
 
 <img src="./media/image4.png" style="width:3.60417in;height:3.41667in"
-alt="A screen shot of a computer program AI-generated content may be incorrect." />Particle
+alt="A screen shot of a computer program AI-generated content may be incorrect." />
+Particle
 class is the parent class for all the other more specific particles, it
 has the functions for edge colliding, applying velocity, returning its
 position and drawing itself to the screen.
@@ -61,8 +62,8 @@ parent particle class.
 The interesting bit (the maths part):
 
 <img src="./media/image6.png" style="width:3.41667in;height:1.87813in"
-alt="A computer screen shot of a program code AI-generated content may be incorrect." />first
-we loop through every particle and then another loop through every
+alt="A computer screen shot of a program code AI-generated content may be incorrect." />
+first we loop through every particle and then another loop through every
 particle nested within that to find every pair of existing particles
 
 then we can use the calculate forces functions that ill go through in a
@@ -72,8 +73,8 @@ then for every particle we call its move function to apply its
 calculated force and then drawn them to the screen
 
 <img src="./media/image7.png" style="width:4.26181in;height:1.20833in"
-alt="A computer screen shot of a code AI-generated content may be incorrect." />First
-to begin to calculate the forces between a pair of particles, we need to
+alt="A computer screen shot of a code AI-generated content may be incorrect." />
+First to begin to calculate the forces between a pair of particles, we need to
 know the distance between them  
 This function takes the position (from the get_position() function) and
 then does some pythag to find the distance between the two points
@@ -85,8 +86,8 @@ gravity, (because weak force seems irrelevant to this)
 First ill go through the strong force as it’s the strongest..?
 
 <img src="./media/image8.png"
-style="width:6.26806in;height:1.61389in" />So first we check if the two
-particles we’re applying the strong force to are both nucleons (proton
+style="width:6.26806in;height:1.61389in" />
+So first we check if the two particles we’re applying the strong force to are both nucleons (proton
 or neutron), next we use the get_distance function and then convert it
 to femtometers using an arbitrary value that I decided seemed to fit. To
 calculate the strong force itself first ive limited the rance to 2.5 fm
@@ -97,8 +98,8 @@ matched the graph of force/distance for the strong force as seen below
 
 <img src="./media/image9.jpeg" style="width:3.64583in;height:2.73958in"
 alt="Nuclear force - Wikipedia" /><img src="./media/image10.png" style="width:6.26806in;height:2.90208in"
-alt="A graph with lines and numbers AI-generated content may be incorrect." />as
-you can see, its not quite perfect but seeing as I couldn’t find
+alt="A graph with lines and numbers AI-generated content may be incorrect." />
+as you can see, its not quite perfect but seeing as I couldn’t find
 anything that created the exact curve being just a function of r itll do
 for this already arbitrary simulation.
 
@@ -107,10 +108,11 @@ The apply_force() function is then called which I will go through later.
 Next ill do the Electromagnetic force
 
 <img src="./media/image11.png" style="width:6.26806in;height:1.30764in"
-alt="A screen shot of a computer program AI-generated content may be incorrect." />this
-one is way more basic, uses the same method as the strong force to get
+alt="A screen shot of a computer program AI-generated content may be incorrect." />
+this one is way more basic, uses the same method as the strong force to get
 the distance and then applies the formula for electromagnetic
-force<img src="./media/image12.png" style="width:1.875in;height:0.80208in"
+force
+<img src="./media/image12.png" style="width:1.875in;height:0.80208in"
 alt="A math equation with a number and a mathematical equation AI-generated content may be incorrect." />:
 
 I have used an arbitrary value for both charge and the coulomb constant
@@ -122,18 +124,18 @@ at all match other graphs ive seen of the same forces.
 The apply force function is then called.
 
 <img src="./media/image17.png" style="width:6.26806in;height:1.30278in"
-alt="A screen shot of a computer code AI-generated content may be incorrect." />Finally
-gravity which is almost identical to electromagnetic
+alt="A screen shot of a computer code AI-generated content may be incorrect." />
+Finally gravity which is almost identical to electromagnetic
 
 <img src="./media/image18.png" style="width:1.51181in;height:0.57292in"
-alt="A black background with white text AI-generated content may be incorrect." />The
-equation here uses the gravitational constant to be 0.01 and then the
+alt="A black background with white text AI-generated content may be incorrect." />
+The equation here uses the gravitational constant to be 0.01 and then the
 masses are scaled correctly as if the mass of an electron was 1 unit so
 slightly less arbitrary than before
 
 <img src="./media/image19.png" style="width:4.55272in;height:1.80233in"
-alt="A screen shot of a computer program AI-generated content may be incorrect." />Finally,
-the apply force function:
+alt="A screen shot of a computer program AI-generated content may be incorrect." />
+Finally, the apply force function:
 
 Here the force is split into its X and Y components and then uses a
 botched version of F= mv/t to calculate the velocity in each direction
