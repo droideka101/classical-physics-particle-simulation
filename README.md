@@ -147,5 +147,7 @@ doesn’t really hold any weight to the overall function of the simulation
 and is therefore irrelevant to mention here, I also don’t want to.
 
 also here are some problems that seem to happen:
+
 1- neutrons have the opposite effect than is expected often introducing more instablility when trying to create a neuclus any larger than helium
+
 2- two electrons orbiting a positive nucleus will repell eachother sending one off as a beta particel (?) and the other will then orbit very close and very quickly around the nucleus
