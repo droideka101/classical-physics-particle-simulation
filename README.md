@@ -34,8 +34,8 @@ the mouse with the button held and it should draw a line as you pull
 back showing the magnitude and trajectory that the spawned particle will
 follow, originating where the button was initially pressed down
 
-<img src="./media/image2.png" style="width:3.4625in;height:1.63542in"
-alt="A black background with a black square AI-generated content may be incorrect." /><img src="./media/image3.png"
+<img src="./media/image3.png" style="width:3.4625in;height:1.63542in"
+alt="A black background with a black square AI-generated content may be incorrect." /><img src="./media/image2.png"
 style="width:3.18056in;height:1.63542in" />
 
 When particles hit the edge of the window they will be teleported to the
